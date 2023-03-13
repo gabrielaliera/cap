@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -18,6 +20,10 @@ li.form {
   border-radius: 8px;
   background-color: #cadcf2;
   width: 300px;
+}
+
+.category{
+  color:rgba(37, 67, 110, 0.9);
 }
 
 input {
@@ -84,4 +90,17 @@ input {
 
 .gallery-screenshot {
   border-radius: 8px;
+}
+
+.quota {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  color: white;
+  background-color: rgba(37, 67, 110, 0.9);
+}
+
+h1 , h2{
+  color:white;
 }

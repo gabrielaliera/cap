@@ -20,7 +20,7 @@ const APIForm = ({inputs, handleChange, onSubmit}) => {
             {inputs &&
              Object.entries(inputs).map(([category, value], index) => (
                 <li className="form" key={index}>
-                    <h2>{category}</h2>
+                    <h2 className='category'>{category}</h2>
                     <input
                         type="text"
                         name={category}
