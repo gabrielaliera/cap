@@ -1,4 +1,4 @@
-
+import {useState} from 'react';
 
 
 const APIForm = ({inputs, handleChange, onSubmit}) => {
@@ -11,7 +11,7 @@ const APIForm = ({inputs, handleChange, onSubmit}) => {
         "Choose the width of your screenshot (in pixels)",
         "Choose the height of your screenshot (in pixels)",
       ];
-      
+
 
     return (
       <div>
