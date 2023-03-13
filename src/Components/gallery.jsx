@@ -2,7 +2,7 @@ const Gallery = ({ images }) => {
 
     return (
       <div>
-        <h2> Your Screenshot Gallery!</h2>
+        <h3> Your Screenshot Gallery!</h3>
         <div className="image-container">
             {images && images.length > 0 ? (
                 images.map((pic, index) => (

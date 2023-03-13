@@ -104,3 +104,7 @@ input {
 h1 , h2{
   color:white;
 }
+
+h3 {
+  color:rgba(37, 67, 110, 0.9);
+}
