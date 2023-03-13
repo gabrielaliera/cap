@@ -9,6 +9,7 @@ const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 function App() {
 
   const [currentImage, setCurrentImage] = useState(null);
+  const [prevImages, setPrevImages] = useState([]);
   
   const [inputs, setInputs] = useState({
     url: "",
@@ -65,6 +66,7 @@ function App() {
         }
     else {
       setCurrentImage(json.url);
+      setPrevImages((images) => [...images, json.url]);
       reset();
     }
   
