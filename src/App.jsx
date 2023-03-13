@@ -7,6 +7,8 @@ const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
 
 function App() {
+
+  const [currentImage, setCurrentImage] = useState(null);
   
   const [inputs, setInputs] = useState({
     url: "",
@@ -50,6 +52,12 @@ function App() {
   }
 
 
+  const callAPI = async (query) => {
+    
+    const response = await fetch(query);
+    const json = await response.json();
+  
+  }
 
   return (  
     <div className="whole-page">
