@@ -81,6 +81,7 @@ function App() {
     });
     
   }
+
   return (  
     <div className="whole-page">
       <h1>Build Your Own Screenshot! 📸</h1>
