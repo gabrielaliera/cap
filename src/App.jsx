@@ -37,6 +37,7 @@ function App() {
         }
       }
       makeQuery();
+      callAPI(query).catch(console.error);
     }
 
   }
@@ -56,6 +57,13 @@ function App() {
     
     const response = await fetch(query);
     const json = await response.json();
+
+    if (json.url == null){
+      alert("Oops! Something went wrong with that query, let's try again!")
+        }
+    else {
+      setCurrentImage(json.url);
+    }
   
   }
 
