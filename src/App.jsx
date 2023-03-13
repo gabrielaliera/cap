@@ -63,10 +63,22 @@ function App() {
         }
     else {
       setCurrentImage(json.url);
+      reset();
     }
   
   }
 
+  const reset = () => {
+    setInputs({
+      url: "",
+      format: "",
+      no_ads: "",
+      no_cookie_banners: "",
+      width: "",
+      height: "",
+    });
+    
+  }
   return (  
     <div className="whole-page">
       <h1>Build Your Own Screenshot! 📸</h1>
