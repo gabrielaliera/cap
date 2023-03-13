@@ -37,7 +37,7 @@ function App() {
         }
       }
       makeQuery();
-      callAPI(query).catch(console.error);
+      
     }
 
   }
@@ -50,6 +50,8 @@ function App() {
     let fullURL = url_starter + inputs.url;
   
     let query = `https://api.apiflash.com/v1/urltoimage?access_key=${ACCESS_KEY}&url=${fullURL}&format=${inputs.format}&width=${inputs.width}&height=${inputs.height}&no_cookie_banners=${inputs.no_cookie_banners}&no_ads=${inputs.no_ads}&wait_until=${wait_until}&response_type=${response_type}&fail_on_status=${fail_on_status}`;
+    
+    callAPI(query).catch(console.error);
   }
 
 
@@ -94,6 +96,36 @@ function App() {
         onSubmit={submitForm}
       />
       <br></br>
+
+      {currentImage ? (
+        <img
+          className="screenshot"
+          src={currentImage}
+          alt="Screenshot returned"
+        />
+      ) : (
+        <div> </div>
+      )}
+
+    <div className="container">
+      <h3> Current Query Status: </h3>
+      <p>
+        https://api.apiflash.com/v1/urltoimage?access_key=ACCESS_KEY    
+        <br></br>
+        &url={inputs.url} <br></br>
+        &format={inputs.format} <br></br>
+        &width={inputs.width}
+        <br></br>
+        &height={inputs.height}
+        <br></br>
+        &no_cookie_banners={inputs.no_cookie_banners}
+        <br></br>
+        &no_ads={inputs.no_ads}
+        <br></br>
+      </p>
+    </div>
+
+    <br></br>
 
     </div>
   );
