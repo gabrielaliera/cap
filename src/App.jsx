@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { useState } from 'react';
+import APIForm from './Components/APIform';
 
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
@@ -16,9 +17,28 @@ function App() {
     height: "",
   });
   
+  const submitForm = () =>{
+
+  }
+  
   return (  
-    <div>Hi</div>
-  )
+    <div className="whole-page">
+      <h1>Build Your Own Screenshot! 📸</h1>
+      
+      <APIForm
+        inputs={inputs}
+        handleChange={(e) =>
+          setInputs((prevState) => ({
+            ...prevState,
+            [e.target.name]: e.target.value.trim(),
+          }))
+        }
+        onSubmit={submitForm}
+      />
+      <br></br>
+
+    </div>
+  );
 }
 
 export default App
