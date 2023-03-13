@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import { useState } from 'react';
 import APIForm from './Components/APIform';
+import Gallery from './Components/gallery';
 
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
@@ -110,26 +111,29 @@ function App() {
         <div> </div>
       )}
 
-    <div className="container">
-      <h3> Current Query Status: </h3>
-      <p>
-        https://api.apiflash.com/v1/urltoimage?access_key=ACCESS_KEY    
-        <br></br>
-        &url={inputs.url} <br></br>
-        &format={inputs.format} <br></br>
-        &width={inputs.width}
-        <br></br>
-        &height={inputs.height}
-        <br></br>
-        &no_cookie_banners={inputs.no_cookie_banners}
-        <br></br>
-        &no_ads={inputs.no_ads}
-        <br></br>
-      </p>
-    </div>
+      <div className="container">
+        <h3> Current Query Status: </h3>
+        <p>
+          https://api.apiflash.com/v1/urltoimage?access_key=ACCESS_KEY    
+          <br></br>
+          &url={inputs.url} <br></br>
+          &format={inputs.format} <br></br>
+          &width={inputs.width}
+          <br></br>
+          &height={inputs.height}
+          <br></br>
+          &no_cookie_banners={inputs.no_cookie_banners}
+          <br></br>
+          &no_ads={inputs.no_ads}
+          <br></br>
+        </p>
+      </div>
 
-    <br></br>
+      <br></br>
 
+      <div className="container">
+        <Gallery images={prevImages} />
+      </div>
     </div>
   );
 }
